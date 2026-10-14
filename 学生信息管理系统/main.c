@@ -4,6 +4,7 @@
 #include"main.h"//引入其他文件函数
 #include<stdlib.h>
 #include<windows.h>
+#include<math.h>
 //int  code1();
 //void code2();
 //void code3();
@@ -253,16 +254,37 @@ void XXH() {
 
 	}
 }
+void Code111() {
+	int a = 0, b = 0, c = 0,d=0;
+	//a -= ++a;
+	//printf("%d",a);
+	c = (a -= ++a), (a += b, b += 4);
+	printf("%d,%d,%d",a,b,c);
+}
+//迭代解方程组
+//x1 - x2 - x3 = 2;
+//2 x1 -x2 - 3x3 = 1;
+//3x1 = 2x2 - 5x3 =0;
+#define MAX 10
+#define epsilon 1e-10
+void Code112() {
+	float x[MAX], y[MAX], delta;
+	int i, n =
+		3;
+
+}
+
 ////code1--20
 void main() {
 	int a;
 	printf("\n******************实验性代码项目解决方案模块***********************\n");
+
 	printf("运行代码模块：\n code1-学生信息管理系统(适用): 1 \n code2-爱心图案--25：2 \n code3-考试题目系统: 3 \n");
 	printf("输入运行的程序代码序号：");
 	scanf("%d", &a);
 	switch (a){
 		case 1:code22(); break;//code22();//学生信息管理系统函数入口
-		case 2:XX(); break;
+		case 2:Code111(); break;
 		//case 3:code5(); break;
 		default:printf("Error"); break;
 	}
